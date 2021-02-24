@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { Characters } from '../../character-collection/character-collection.container';
-import { Character } from '../../character/character.container';
+import { CharacterPage } from '../../character/character.container';
 
 export const RoutesComponent = () => {
   return (
@@ -11,8 +11,8 @@ export const RoutesComponent = () => {
           <Route exact path="/">
             <Characters />
           </Route>
-          <Route path="/detail/:id">
-            <Character />
+          <Route path="/character/:id">
+            <CharacterPage />
           </Route>
         </Switch>
       </Router>

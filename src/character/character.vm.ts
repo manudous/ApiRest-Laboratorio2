@@ -8,3 +8,6 @@ export interface CharacterEntityVm {
   bestSentences: string[];
 }
 
+export interface DetailPageParams {
+  id: string;
+}
