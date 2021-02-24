@@ -16,3 +16,4 @@ export const useCharacterCollection = () => {
 
   return { characterCollection, loadCharacterCollection };
 };
+
