@@ -1,17 +1,24 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Link } from 'react-router-dom';
-import { Typography, Button, TextareaAutosize } from '@material-ui/core';
+import { Typography, Button } from '@material-ui/core';
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
 import ArrowBackOutlinedIcon from '@material-ui/icons/ArrowBackOutlined';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
 import { useStyles } from './character-description.style';
+import Axios from 'axios';
 
 export const CharacterDescription = ({ characterPage }) => {
   const classes = useStyles();
 
   const { id, name, image, bestSentences } = characterPage;
   const [handleInput, setHandleInput] = React.useState('');
+
+  const deleteSentence = (i) => {
+    console.log('borrando frase', i)
+  }
 
   console.log(bestSentences);
   return (
@@ -59,9 +66,21 @@ export const CharacterDescription = ({ characterPage }) => {
           </Typography>
 
           {bestSentences.map((sentence, index) => (
-            <Typography variant="h6" paragraph key={index}>
-             + {sentence}
-            </Typography>
+            
+              <Typography variant="h6" paragraph key={index}>
+                + {sentence}
+                 <Button
+                  variant="contained"
+                  
+                  startIcon={<EditIcon />}
+                />
+                <Button
+                  variant="contained"
+                  onClick={() => deleteSentence(index)}
+                  startIcon={<DeleteIcon color="secondary" />}
+                />
+              </Typography>
+           
           ))}
         </Grid>
         <Link to="/" style={{ textDecoration: 'none' }}>

@@ -13,5 +13,10 @@ export const useStyles = makeStyles({
   },
   texfield: {
     width:"100%"
+  },
+  sentence: {
+    // display:"flex",
+    // marginRight:"2rem"
+
   }
 });
