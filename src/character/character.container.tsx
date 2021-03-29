@@ -45,7 +45,7 @@ export const CharacterPage: React.FC = () => {
   const classes = useStyles();
 
   const { characterPage, loadCharacter } = useCharacterCollection();
-  const { id, name, image, bestSentences } = characterPage;
+  const { id, image, bestSentences } = characterPage;
 
   const [newSentence, setNewSentence] = React.useState({
     id: null,
