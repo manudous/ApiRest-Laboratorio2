@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import { characterApiEntity } from './character.api-model';
 
-const url = 'http://localhost:3000/characters/';
+const url = 'api/characters/';
 
 export const getCharacterFromApi = async (
   id: string
@@ -9,5 +9,7 @@ export const getCharacterFromApi = async (
   const { data } = await Axios.get(`${url}/${id}`);
   return data;
 };
+
+
 
 

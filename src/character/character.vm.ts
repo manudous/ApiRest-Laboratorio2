@@ -1,3 +1,8 @@
+export interface sentence {
+  id: number;
+  sentence: string;
+}
+
 export interface CharacterEntityVm {
   id: string;
   name: string;
@@ -5,7 +10,7 @@ export interface CharacterEntityVm {
   status: string;
   gender: string;
   species: string;
-  bestSentences: string[];
+  bestSentences: sentence[];
 }
 
 export interface DetailPageParams {

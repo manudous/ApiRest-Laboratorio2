@@ -1,22 +1,23 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles({
   root: {
-    margin: "auto",
-    marginTop: "2rem",
-    width: "60%",
+    margin: 'auto',
+    marginTop: '2rem',
+    width: '60%',
   },
   button: {
-    color: "#fff",
-    fontWeight: "bold",
-    textDecoration: "none",
+    color: '#fff',
+    fontWeight: 'bold',
+    textDecoration: 'none',
   },
   texfield: {
-    width:"100%"
+    width: '100%',
   },
-  sentence: {
-    // display:"flex",
-    // marginRight:"2rem"
-
-  }
+  inputEdit: {
+    '& > *': {
+      margin: '.5rem',
+      width: '25ch',
+    },
+  },
 });

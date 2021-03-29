@@ -1,3 +1,7 @@
+interface characterEntity {
+  id: number;
+  sentence: string;
+}
 export interface characterApiEntity {
   id: string;
   name: string;
@@ -5,5 +9,6 @@ export interface characterApiEntity {
   status: string;
   gender: string;
   species: string;
-  bestSentences: string[];
+  bestSentences: characterEntity[];
 }
+
